@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.1'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt',       '3.1.11'
+gem 'faker',        '1.6.6'
 gem 'bootstrap-sass', '3.3.6'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
