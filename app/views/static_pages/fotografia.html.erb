@@ -1,0 +1,77 @@
+<% provide(:title, "Fotografía") %>
+
+<div class="imagen-foto", style = "background: url(<%= asset_path 'fotoshoots.jpg' %>) no-repeat center center;">
+		<h1>Photoshoots</h1>
+		<h2>Crea un recuerdo para toda la vida</h2>
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-2">
+		<h3>Recuerdos para toda la vida</h3>
+		<p>Una sesión planificada para capturar los mejores recuerdos familiares, de pareja o simplemente tu mejor momento.</p>
+	</div>	
+</div>
+
+<hr align="center" size="5" width="100%" />
+
+<div class="imagen-foto", style = "background: url(<%= asset_path 'eventos.jpg' %>) no-repeat center center;">
+		<h1>Eventos</h1>
+		<h2>Tu celebración merece ser recordada</h2>
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-2">
+		<h3>Tu celebración merece ser recordada</h3>
+		<p>Luego de haber preparado ese festejo especial, asegurate que el recuerdo del mismo esté siempre a tu alcance.</p>
+	</div>
+</div>
+
+<hr align="center" color= black size="5" width="100%" />
+
+<div class="imagen-foto", style = "background: url(<%= asset_path 'img-boda1.jpg' %>) no-repeat center center;">
+		<h1>Bodas</h1>
+		<h2>Guarda tus recuerdos de ese día especial</h2>
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-2">
+		<h3>Atesora cada momento de ese día especial</h3>
+		<p>No pierdan ningún detalle de ese día. Déjennos acompañarlos y documentar ese momento para toda la vida.</p>
+	</div>
+</div>
+
+
+<!-- Carousel -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000,
+      pause: 'false'
+    })
+  });
+</script>
+
+<div class="Row">
+	<div class="container" id="carousel">
+	  <div id="myCarousel" class="carousel slide">
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+	    <!-- Carousel items -->
+	    <div class="carousel-inner">
+	      <div class="active item">Trabajar con Viva Fotografía fue una de las partes más fáciles y agradables de nuestra boda. Siempre tuvieron en mente el cronograma, lo cual nos dio la certeza que no nos iban a fallar en ningún detalle. El día del evento fueron puntuales y lo registraron de inicio a fin. Tenemos fotos hermosas y naturales que nos hacen revivir la emoción y felicidad de ese día cada vez que las vemos.
+	      <br><span>- Liana Hervas y Pedro Ponce -</span></div> 
+	      <div class="item">Gracias a Viva Fotografía! Excelentes fotografos, muy profesionales. Nos divertimos mucho durante la sesion, todo muy natural y comodo! Muy recomendado. <br><span>- Andrea Pinto -</span></div>
+	      <div class="item">Realmente muy emocionada y contenta con el servicio de Viva Fotografía, fueron muy profesionales, llegaron puntuales a mi evento, fotos de gran calidad en digital e impresas y el precio fue muy asequible para nuestro bolsillo. Recomendados.<br><span>- Cristina Ballesteros -</span></div>
+	    </div>
+	    <!-- Carousel nav -->
+	    <!--
+	    <a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;Anterior</a>
+	    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;Siguiente</a>
+	    -->
+	  </div>
+	</div> 
+</div>
+

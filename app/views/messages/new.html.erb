@@ -1,0 +1,57 @@
+<% provide(:title, "Contáctanos") %>
+  <div class="centered">
+  
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+        <div class="errores-mensajes">
+          <% if @message.errors.any? %>
+            <ul>
+              <% @message.errors.full_messages.each do |message| %>
+                <li><%= message.lstrip %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+        <h1>Contáctanos</h1>
+        <%= form_for @message, url: contact_path do |message_form| %>
+          <fieldset>
+            <div class="field">
+              <%= message_form.text_field :nombre, placeholder: "Nombre" %>
+            </div>
+            
+            <div class="field">
+              <%= message_form.email_field :email, placeholder: "Email"%>
+            </div>
+            
+            <div class="field">
+              <%= message_form.text_area :mensaje, placeholder: "Mensaje"%>
+            </div>
+          </fieldset>
+          
+          <fieldset>
+            <div class="field">
+              <%= message_form.submit "Enviar" %>
+            </div>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-final" style= "background-image: url(<%= asset_path 'contactFinal.jpg' %>) ; ">
+    <div class="redes-contacto">
+      <h4>Viva, invitaciones y fotografía</h4>
+      <h4>Quito, Ecuador</h4>
+      <h4>Email:<a href="mailto:vivainvita@yahoo.com">vivainvita@yahoo.com</a></h4>
+      <h4>Redes sociales</h4>
+      <ul>
+      <li><%= link_to image_tag("instagramWhite.png", alt: "Instagram logo", :width => 30) , 'https://www.instagram.com/vivainvita/', target: :_blank %></li>
+      <li><%= link_to image_tag("pinterestWhite.png", alt: "Pinterest logo", :width => 30) , 'https://www.pinterest.com/vivainvitacionesyfotografa/pins/', target: :_blank %></li>
+      <li><%= link_to image_tag("facebookWhite.png", alt: "Facebook logo", :width => 30) , 'https://www.facebook.com/vivainvita/', target: :_blank %></li>
+    <!--   <li>< %= link_to "Acerca de",   about_path %></li>
+    <li>< %= link_to "Contáctanos", contact_path %></li> -->
+    </ul>
+    </div>
+
+  </div>

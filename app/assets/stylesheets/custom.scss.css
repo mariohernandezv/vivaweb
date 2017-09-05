@@ -1,0 +1,369 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:500');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300i');
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: font_url('OpenSans-CondLight.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { font-family: 'Open Sans Condensed', sans-serif ;   }
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 5em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-size: 3em;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: normal;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+/* header */
+.navbar-inverse {
+    background-color: white;
+    .navbar-right {
+      display: inline-flex;
+      li a {
+          &:hover {
+            color: #ed2024;
+          }
+      }
+    }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 15px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: center;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: center;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: center;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: center;
+}
+
+.errores-mensajes {
+color: #b94a48;
+background-color: #f2dede;
+}
+
+.col-md-12 {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 450px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  display: block;
+  margin: auto;
+  float: center;
+}
+
+#imagenes-home {
+  background-color: black;
+  height: 60px; 
+  &:hover{
+    background-color:grey;
+  }
+  h2 {
+    text-align: center;
+    color: white;
+  }
+}
+
+.imagen-foto {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px; 
+  text-align: center;
+  padding-top: 40px;
+  h1, h2 {
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+  }
+}
+
+
+.carousel {
+  height: 400px; 
+  background-color: $gray;
+  color:white;
+  text-align: center;
+  font-size: 2em;
+  padding: 40px;
+  margin:20px;
+  span {
+    font-style: italic; 
+    text-align: right;
+  }
+}
+
+/* contacto */
+.contact-final {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 350px; 
+  background-position: top center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.redes-contacto {
+  padding: 20px;
+  h4, a {
+    color: white;
+    text-decoration: none;
+    padding:6px;
+  }
+  ul {
+    padding:0;
+  }
+  li {
+
+    display: inline-flex;
+  }
+}
+
+#row-galeria-inv {
+  display: inline-flex;
+}
+
+#col-galeria-inv {
+  margin:10px;
+  text-align: center;
+  padding:10px;
+  border: 1px solid grey;
+}
+
+
