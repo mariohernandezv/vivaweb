@@ -8,6 +8,13 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
+
+# Para solucionar los headers de cloudflare
+# gem 'rails', github: 'rails/rails', '~> 5.1.3'
+gem 'rack' # Rails depends on Rack 2
+gem 'arel' # Rails master works alongside of arel master.
+
+
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt',       '3.1.11'
 gem 'faker',        '1.6.6'
