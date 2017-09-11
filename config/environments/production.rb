@@ -90,6 +90,8 @@ Rails.application.configure do
 
   #Para arreglar los headers de cloudflare !!!!!!!!!
   config.action_controller.forgery_protection_origin_check = false
+
+  
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
